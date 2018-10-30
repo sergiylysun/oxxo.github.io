@@ -1,0 +1,491 @@
+
+//main styles
+
+.main-wrapper{
+	padding: 0 0 0 0;
+	min-width: $min-width;
+    width: 100%;
+	position: relative;
+	overflow: hidden;
+	min-height:100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction:column;
+    -webkit-flex-direction:column;
+    -ms-flex-direction: column;
+	justify-content:flex-start;	
+    -webkit-justify-content:flex-start;	
+    -ms-flex-pack: start;
+}
+.wrapper{
+	min-width: $min-width;
+	max-width: $max-width;
+	// padding: 0 40px 0 40px;
+	margin: 0 auto;
+	position: relative;
+}
+
+/* titles */
+p{	
+	@include font($base-font-size,$base-line-height,$text-color);
+	padding: 15px 0 15px 0;
+	font-weight: 400;	
+}
+h1{	
+	@include font($font-size-h1,$line-height-h1,$title-color);
+	font-family: $title-font-family;
+	padding: 15px 0 15px 0;
+	font-weight: 400;	
+}
+h2{
+	@include font($font-size-h2,$line-height-h2,$title-color);
+	font-family: $title-font-family;
+	padding: 15px 0 15px 0;
+	font-weight: 400;	
+}
+h3{
+	@include font($font-size-h3,$line-height-h3,$title-color);
+	font-family: $title-font-family;
+	padding: 15px 0 15px 0;
+	font-weight: 400;
+}
+
+/* text position */
+.text-left{text-align: left!important}
+.text-center{text-align: center!important}
+.text-right{text-align: right!important}
+.nowrap{white-space: nowrap!important;}
+
+
+/* loader */
+.loaded .main-wrapper{visibility:hidden;}
+.icon-load{background:url(../img/loader.gif) no-repeat left top;width:40px;height:40px;position:fixed;left:50%;top:50%;margin-left:-20px;margin-left:-20px;display:none;}
+.loaded .icon-load{display:block;}
+
+
+/*
+================================================================================
+|                                     CONTENT                                 |
+================================================================================
+*/
+.content{	
+	min-width: $min-width;
+	text-align:left;
+    width: 100%;
+	order: 2;
+    -webkit-order: 2;
+	flex-grow: 1;
+    -webkit-flex-grow: 1;
+	background: #f9f9f9;
+}
+
+.block-title {
+	@include font(36px,36px,#666);
+	font-family: 'OpenSans';
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	// margin-top: 80px;
+	padding: 0;
+	box-sizing: border-box;
+
+	hr {
+		width: 170px;
+		height: 5px;
+		background: #666;
+	}
+}
+
+.block-description {
+	width: 560px;
+	margin: 0 auto;
+	@include font(14px,20px,#666);
+	font-family: 'OpenSans';
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 75px;
+}
+
+.btn {
+	border: 1px solid #ff7200;
+	@include radius(3px);
+	color: #ff7200;
+	margin: 10px 30px 0 0;
+	display: inline-block;
+
+	&:last-child {
+		background-color: #ff7200;
+		color: #fff;
+
+		&:hover {
+			color: #ff7200;
+			background-color: #fff;
+		}
+	}
+
+	&:hover {
+		background-color: #ff7200;
+		color: #fff;
+	}
+
+	i {
+		margin-right: 5px;
+	}
+}
+
+/*============================= about us start ===========================*/
+
+.about {
+	width: 80%;
+	margin: 100px auto;
+}
+
+.about-slider {
+	width: 46%;
+	height: 100%;
+	display: block;
+	@include shadow(0 10px 15px rgba(0, 0, 0, 0.7));
+
+	img {
+		width: 100%;
+		// height: 100%;
+		// display: block;
+	}
+}
+
+.about-content {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about-box {
+	margin-left: 30px;
+
+	h2 {
+		@include font(20px,43px,#666);
+		font-family: 'OpenSans';
+		font-weight: 600;
+		padding: 0;
+		margin-top: -10px;
+	}
+
+	p {
+		@include font(14px,18px,#666);
+		font-family: 'OpenSans';
+		font-weight: 300;
+	}
+}
+
+.about-slider .slick-arrow {
+	width: 48px;
+	height: 48px;
+	top: 50%;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+}
+
+.about-slider {
+	.slick-prev {
+		left: 20px;
+		z-index: 100;
+
+		&:before {
+			content: url("../../img/about-prev.png");
+		}
+	}
+
+	.slick-next{
+		right: 20px;
+		@include transition(0.4s);
+
+		&:before {
+			content: url("../../img/about-next.png");
+		}
+	}
+}
+
+/*============================= about us end ===========================*/
+
+
+/*============================= amazing start ===========================*/
+
+.amazing {
+	width: 100%;
+	background-image: url("../../img/bg_amazing.png");
+	background-size: cover;
+	padding: 100px 10%;
+	color: #fff;
+	overflow: hidden;
+
+	.block-title, .block-description {
+		color: #fff;
+
+		hr {
+			background-color: #fff;
+		}
+	}
+}
+
+.amazing-plus-box {
+	width: 100%;
+}
+
+.amazing-plus-box-row {
+	width: 100%;
+	margin-bottom: 70px;
+	display: flex;
+	justify-content: space-between;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.amazing-plus-item {
+		width: 32%;
+		display: flex;
+		justify-content: space-between;
+
+		i {
+			@include font(36px,36px,#ff7200);
+		}
+
+		.amazing-plus-item-desc {
+			width: 280px;
+			margin-left: 25px;
+
+			h4 {
+				@include font(18px,18px,#fff);
+				font-family: 'OpenSans';
+				font-weight: 600;
+			}
+
+			p {
+				@include font(14px,22px,#fff);
+				font-family: 'OpenSans';
+				font-weight: 300;
+			}
+		}
+	}
+}
+
+
+/*============================= amazing end ===========================*/
+
+/*============================= team start ===========================*/
+
+.team {
+	width: 80%;
+	margin: 100px auto;
+}
+
+.team-box-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.team-box-item {
+	width: 23%;
+	text-align: center;
+
+	.team-item-img {
+		max-width: 100%;
+	}
+
+	h4 {
+		@include font(16px,43px,#666);
+		font-family: 'OpenSans';
+		font-weight: 300;
+
+		span {
+			color: #ff7200;
+			font-weight: 500;
+		}
+	}
+
+	p {
+		@include font(16px,22px,#666);
+		font-family: 'OpenSans';
+		font-weight: 300;
+		text-align: justify;
+	}
+
+	.team-item-social-box {
+		display: flex;
+		justify-content: space-between;
+
+		a {
+			width: 44px;
+			height: 44px;
+			background-color: #f0f0f0;
+			@include font(18px,44px,#666);
+			@include radius(50%); 
+			@include transition(0.3s);
+
+			&:hover {
+				background-color: #ff7200;
+				color: #fff;
+			}
+		}
+	}
+}
+
+/*============================= team end ===========================*/
+
+/*============================= work start ===========================*/
+
+.work {
+	width: 100%;
+	margin: 100px auto;
+}
+
+.work-box-row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.work-box-item {
+	width: 25%;
+	height: 230px;
+	overflow: hidden;
+	position: relative;
+}
+
+.work-box-item-desc {
+	display: none;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.6);
+
+	&:hover {
+		
+	}
+
+	.button {
+		text-align: center;
+		padding: 50px 0;
+
+		a {
+			display: inline-block;
+			padding: 15px;
+			border: 2px solid #f0f0f0;
+			@include radius(50%); 
+			@include transition(0.3s);
+			@include font(20px,20px,#fff);
+			margin-right: 20px;
+			cursor: pointer;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&:hover {
+				background-color: #fff;
+				color: #ff7200;
+			}
+		}
+	}
+
+	.work-item-img-desc {
+		width: 100%;
+		background-color: #f0f0f0;
+		text-align: center;
+		font-family: 'OpenSans';
+		font-weight: 300;
+
+		h4 {
+			@include font(20px,20px,#363636);
+			padding-top: 20px;
+			font-weight: normal;
+		}
+
+		p {
+			@include font(14px,14px,#666);
+			text-transform: uppercase;
+		}
+	}
+}
+
+/*============================= work end ===========================*/
+
+/*============================= buy start ===========================*/
+
+.buy {
+	width: 100%;
+	margin: 100px auto;
+}
+
+.buy-content {
+	width: 60%;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
+.buy-desc {
+	font-family: 'OpenSans';
+	@include font(20px,30px,#666);
+	font-weight: 400;
+	margin: 30px 0 10px 0;
+}
+
+.important-text {
+	color: #ff7e26;
+}
+
+/*============================= buy end ===========================*/
+
+/*============================= clients start ===========================*/
+
+.clients {
+	width: 100%;
+	background-image: url("../../img/bg_clients.png");
+	background-size: cover;
+	padding: 100px 10%;
+	color: #f0f0f0;
+	overflow: hidden;
+
+	.block-title, .block-description {
+		color: #f0f0f0;
+
+		hr {
+			background-color: #f0f0f0;
+		}
+	}
+}
+
+
+/*============================= clients end ===========================*/
+
+@media screen and (max-width: 1200px) {
+	
+}
+
+@media screen and (min-width: 992px){
+	
+}
+
+@media screen and (max-width: 991px) {
+	
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+	
+}
+
+
+
