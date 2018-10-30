@@ -99,17 +99,17 @@ input[type=submit], input[type=button], button { -webkit-appearance: none; outli
 
 [dir="rtl"] .slick-prev { left: auto; right: -25px; }
 
-.slick-prev:before { content: url("../../img/prev.png"); }
+.slick-prev:before { content: url("../img/prev.png"); }
 
-[dir="rtl"] .slick-prev:before { content: url("../../img/next.png"); }
+[dir="rtl"] .slick-prev:before { content: url("../img/next.png"); }
 
 .slick-next { right: 5px; }
 
 [dir="rtl"] .slick-next { left: -25px; right: auto; }
 
-.slick-next:before { content: url("../../img/next.png"); }
+.slick-next:before { content: url("../img/next.png"); }
 
-[dir="rtl"] .slick-next:before { content: url("../../img/prev.png"); }
+[dir="rtl"] .slick-next:before { content: url("../img/prev.png"); }
 
 /* Dots */
 .slick-dotted.slick-slider { margin-bottom: 30px; }
@@ -251,15 +251,15 @@ h3 { font-size: 28px; line-height: 32px; color: #000; font-family: "Open Sans", 
 
 .about-slider .slick-prev { left: 20px; z-index: 100; }
 
-.about-slider .slick-prev:before { content: url("../../img/about-prev.png"); }
+.about-slider .slick-prev:before { content: url("../img/about-prev.png"); }
 
 .about-slider .slick-next { right: 20px; -webkit-transition: 0.4s; -o-transition: 0.4s; transition: 0.4s; }
 
-.about-slider .slick-next:before { content: url("../../img/about-next.png"); }
+.about-slider .slick-next:before { content: url("../img/about-next.png"); }
 
 /*============================= about us end ===========================*/
 /*============================= amazing start ===========================*/
-.amazing { width: 100%; background-image: url("../../img/bg_amazing.png"); -webkit-background-size: cover; background-size: cover; padding: 100px 10%; color: #fff; overflow: hidden; }
+.amazing { width: 100%; background-image: url("../img/bg_amazing.png"); -webkit-background-size: cover; background-size: cover; padding: 100px 10%; color: #fff; overflow: hidden; }
 
 .amazing .block-title, .amazing .block-description { color: #fff; }
 
@@ -339,7 +339,7 @@ h3 { font-size: 28px; line-height: 32px; color: #000; font-family: "Open Sans", 
 
 /*============================= buy end ===========================*/
 /*============================= clients start ===========================*/
-.clients { width: 100%; background-image: url("../../img/bg_clients.png"); -webkit-background-size: cover; background-size: cover; padding: 100px 10%; color: #f0f0f0; overflow: hidden; }
+.clients { width: 100%; background-image: url("../img/bg_clients.png"); -webkit-background-size: cover; background-size: cover; padding: 100px 10%; color: #f0f0f0; overflow: hidden; }
 
 .clients .block-title, .clients .block-description { color: #f0f0f0; }
 
